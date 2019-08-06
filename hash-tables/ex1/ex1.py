@@ -34,11 +34,14 @@ def get_indices_of_item_weights(weights, length, limit):
                 result = (search, location)
             elif search < location:
                 result = (location, search)
-
-    return print_answer(result)
+    return result
 
 def print_answer(answer):
     if answer is not None:
         print(f'{answer[0]} {answer[1]}')
     else:
         print("None")
+
+# weights = [ 4, 6, 10, 15, 16 ], length = 5, limit = 21
+weights = [ 4, 6, 10, 15, 16 ]
+get_indices_of_item_weights(weights, 5, 21)
